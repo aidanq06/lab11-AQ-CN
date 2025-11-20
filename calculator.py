@@ -23,8 +23,10 @@ def hypotenuse(a, b):
 def add(a, b): 
     return a + b
 
-def subtract(a, b,):
-    return a - b
+def subtract(a, b):
+    if a < 0:
+        return a
+    return b - a
 
 def multiply(a, b):
     return a * b
@@ -50,9 +52,7 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    if a != 0:
-        pass
-    else:
+    if b == 0:
         raise ZeroDivisionError("Cannot divide by zero.")
     return b/a
 
