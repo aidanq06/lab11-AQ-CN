@@ -39,6 +39,33 @@ def exponent(a, b):
     return a ** b
 
 
+import math
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+def mul(a, b):
+    return a * b
+
+def div(a, b):
+    if a != 0:
+        pass
+    else:
+        raise ZeroDivisionError("Cannot divide by zero.")
+    return b/a
+
+def log(a, b):
+    if a == 0:
+        raise ValueError("Logarithm base must be positive and not equal to 1, and argument must be positive.")
+    elif a < 0:
+        raise ValueError("Logarithm base must be positive and not equal to 1, and argument must be positive.")
+    return math.log(a,b)# use math library + raise ValueError
+
+def exp(a, b):
+    return a**b
+
 
 
 
