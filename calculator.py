@@ -9,7 +9,7 @@ One function per operation, in order.
 
 def square_root(a):
     if a < 0:
-        raise ValueError("Can't take scquare root of negative number.")
+        raise ValueError("Can't take square root of negative number.")
     return math.sqrt(a)
 
 def hypotenuse(a, b):
@@ -25,10 +25,6 @@ def subtract(a, b,):
 def multiply(a, b):
     return a * b
 
-def divide(a, b):
-    if a == 0:
-        raise ValueError("Cannot divide by zero.")
-    return b / a
 
 def logarithm(a,b):
     if a <= 0 or b <= 0 or b == 1:
