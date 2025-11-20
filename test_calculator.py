@@ -1,3 +1,8 @@
+# https://github.com/aidanq06/lab11-AQ-CN
+# Partner 1: Aidan Quach
+# Partner 2: Claire Natanek
+
+
 import unittest
 import math
 from calculator import *
@@ -18,18 +23,36 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(multiply(2.5, 4.0), 10.0)
 
     def test_divide(self): # 3 assertions
-        self.assertAlmostEqual(divide(2, 10), 5.0)
-        self.assertAlmostEqual(divide(4, 8), 2.0)
-        self.assertAlmostEqual(divide(3, 9), 3.0)
+        self.assertAlmostEqual(div(2, 10), 5.0)
+        self.assertAlmostEqual(div(4, 8), 2.0)
+        self.assertAlmostEqual(div(3, 9), 3.0)
     # ##########################
-
+    def test_add(self):
+        self.assertEqual(add(1, 2), 3)
+        self.assertEqual(add(-2, 3), 1)
+        self.assertEqual(add(0, -3.0), -3)
     ######## Partner 2
     # def test_divide_by_zero(self): # 1 assertion
     #     # call division function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
     #     fill in code
+    def test_subtract(self):
+        self.assertEqual(subtract(1, 2), 1)
+        self.assertEqual(subtract(-2, 3), -2)
+        self.assertEqual(subtract(0, -3.5), -3.5)
+    def test_divide_by_zero(self):
+        self.assertRaises(ZeroDivisionError, div, 2, 0)
+        self.assertRaises(ZeroDivisionError, div, 0, 0)
 
+    def test_logarithm(self):
+        self.assertEqual(logarithm(1, 10), 0)
+        self.assertEqual(logarithm(10, 10), 1)
+        self.assertEqual(logarithm(4, 2), 2)
+
+    def test_log_invalid_base(self):
+        self.assertRaises(ValueError, logarithm, 10, 0)
+        self.assertRaises(ValueError, logarithm, 10, -10)
     # def test_logarithm(self): # 3 assertions
     #     fill in code
 

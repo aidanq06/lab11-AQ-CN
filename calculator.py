@@ -1,3 +1,7 @@
+# https://github.com/aidanq06/lab11-AQ-CN
+# Partner 1: Aidan Quach
+# Partner 2: Claire Natanek
+
 import math
 
 """
